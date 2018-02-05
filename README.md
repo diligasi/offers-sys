@@ -1,4 +1,4 @@
-[Offers App](https://ih0.redbubble.net/image.118888820.1283/sticker,375x360-bg,ffffff.u3.png)
+![Offers App](https://ih0.redbubble.net/image.118888820.1283/sticker,375x360-bg,ffffff.u3.png)
 
 # Offers App
 
