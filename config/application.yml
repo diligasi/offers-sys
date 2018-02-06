@@ -21,12 +21,12 @@ test:
   DATABASE_HOST: 'localhost'
 
 production:
-  DEFAULT_URL: ''
-  DEVISE_PASSWORD_RESET_URL: ''
+  DEFAULT_URL: 'https://offers-sys.herokuapp.com/'
+  DEVISE_PASSWORD_RESET_URL: 'https://offers-sys.herokuapp.com/users/password/new'
 
   SECRET_KEY_BASE: 'd9c18925d1a3daa3702b5cce96f95d70762bae2f6115dd03ba21c094d6e125a6af945fe0f9f545d1a4a64f6f85549623932bc4dacb31f0a80359af78060d227f'
 
-  DATABASE_NAME: 'offers_sys'
-  DATABASE_USER: ''
-  DATABASE_PASSWORD: ''
-  DATABASE_HOST: 'localhost'
+  DATABASE_NAME: 'd4v6jepneclsq'
+  DATABASE_USER: 'baqeiwlzgpnclt'
+  DATABASE_PASSWORD: '10559bcc08a68d296fd3a03bd386ad1349e92718277e8042a31d50e9f82c67fa'
+  DATABASE_HOST: 'ec2-54-197-253-122.compute-1.amazonaws.com'
