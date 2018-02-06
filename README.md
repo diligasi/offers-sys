@@ -17,7 +17,7 @@ parts, etc), so, in this scenario the application will show it's active offers  
 application is divided in two major components: the admin interface and the user interface.
 
 ### Production URL
-_TODO: to implement_
+https://offers-sys.herokuapp.com/
 
 ## The Admin Interface - [go to summary](#offers-app)
 
@@ -34,7 +34,7 @@ example). The users interface is completely responsive.
 This session is intended to list whatever steps are necessary to get the application up and running. 
 Besides that, here you'll find some technical informations like versions and jobs to be executed.
 
-* App hosted at `Heroku` _TODO: to implement_
+* App hosted at `Heroku` [Check domain](#production-url)
 * Ruby Version `2.4.2`
 * Rails Version `5.1.4`
 * Database `PostgreSQL`
