@@ -2,9 +2,9 @@
   <%# @offers.size %>
   <% @offers.each do |offer| %>
     <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card">
+      <div class="card" data-toggle="tooltip" data-placement="top" title="<%= offer.description %>">
         <% if offer.premium %>
-          <iv class="premium">Premium</iv>
+          <div class="premium">Premium</div>
         <% end %>
         <img class="card-img-top" src="http://placehold.it/500x325" alt="">
         <div class="card-body">
@@ -12,7 +12,7 @@
           <p class="card-text"><%= offer.description %></p>
         </div>
         <div class="card-footer">
-          <a href="<%= offer.url %>" class="btn btn-primary">Shop Now</a>
+          <%= link_to 'Shop Now', offer.url, target: '_blank' %>
         </div>
       </div>
     </div>

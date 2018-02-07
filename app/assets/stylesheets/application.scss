@@ -29,6 +29,15 @@ body {
     height: 100%;
 }
 
+.card-text {
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+}
+
 .premium {
   background: #000;
   color: #fff;
