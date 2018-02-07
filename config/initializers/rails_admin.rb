@@ -23,6 +23,25 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
+  RailsAdmin::Config::Actions.register(
+    RailsAdmin::Actions::ManageOfferState
+  )
+
+  config.model 'Offer' do
+    list do
+      field :advertiser_name do
+        label 'Name'
+      end
+      field :url
+      field :state
+    end
+
+    create do
+      exclude_fields :state
+    end
+  end
+
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -33,6 +52,7 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+    manage_offer_state
 
     ## With an audit adapter, you can add:
     # history_index

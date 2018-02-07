@@ -4,9 +4,22 @@ class Offer < ApplicationRecord
   validates_length_of :description, maximum: 500
   validates_format_of :url, with: %r{(?:http(s)?://)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#\[\]@!$&'()*+,;=]+}
 
-  enum state: %i[disabled enabled]
+  STATE = %w[disabled enabled].freeze
+  enum state: STATE
 
   before_create :set_disabled_state
+
+  def opposite_state
+    (STATE - [state]).first
+  end
+
+  def disabled?
+    state == STATE[0]
+  end
+
+  def enabled?
+    state == STATE[1]
+  end
 
   private
 
