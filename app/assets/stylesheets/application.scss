@@ -29,6 +29,52 @@ body {
     height: 100%;
 }
 
+.countdown-wrapper {
+  background: rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  height: 165px;
+  padding: 53px 0 0 0;
+  width: 100%;
+}
+
+h4.NaN {
+  margin-top: 15px;
+}
+
+.countdown-clock {
+  zoom: 0.393;
+  -moz-transform: scale(0.35);
+}
+
+@media (max-width: 575px) {
+  .countdown-clock {
+    zoom: 0.445;
+    -moz-transform: scale(0.445);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .countdown-clock {
+    zoom: 0.67;
+    -moz-transform: scale(0.67);
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .countdown-clock {
+    zoom: 0.512;
+    -moz-transform: scale(0.512);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .countdown-clock {
+    zoom: 0.317;
+    -moz-transform: scale(0.317);
+  }
+}
+
 .card-text {
   display: block;
   text-overflow: ellipsis;
@@ -38,8 +84,9 @@ body {
   line-height: 1.8em;
 }
 
-.premium {
-  background: #000;
+.card-top {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
   color: #fff;
   font-weight: bold;
   line-height: 40px;

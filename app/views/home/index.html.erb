@@ -1,12 +1,20 @@
 <div class="row text-center">
-  <%# @offers.size %>
   <% @offers.each do |offer| %>
     <div class="col-lg-3 col-md-6 mb-4">
       <div class="card" data-toggle="tooltip" data-placement="top" title="<%= offer.description %>">
-        <% if offer.premium %>
-          <div class="premium">Premium</div>
-        <% end %>
-        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <div class="bg-dark card-top">
+          <% if offer.premium %>
+            Premium Offer
+          <% end %>
+        </div>
+        <div class="countdown-wrapper" data-days-to-end="<%= days_to_end(offer.ends_at) %>">
+          <% if offer.ends_at.present? %>
+            <h4>Offer ends in</h4>
+            <div class="countdown-clock"></div>
+          <% else %>
+            <h4 class="NaN">Offer without ending date, enjoy!</h4>
+          <% end %>
+        </div>
         <div class="card-body">
           <h4 class="card-title"><%= offer.advertiser_name %></h4>
           <p class="card-text"><%= offer.description %></p>
@@ -18,3 +26,12 @@
     </div>
   <% end %>
 </div>
+
+<script type="text/javascript">
+  $('.countdown-clock').each(function() {
+    var clock = new FlipClock($(this), 3600 * 24 * $(this).parent().data('days-to-end'), {
+      clockFace: 'DailyCounter',
+      countdown: true
+    });
+  });
+</script>
