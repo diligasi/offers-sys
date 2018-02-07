@@ -1,1 +1,20 @@
-<%= @offers.size %>
+<div class="row text-center">
+  <%# @offers.size %>
+  <% @offers.each do |offer| %>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card">
+        <% if offer.premium %>
+          <iv class="premium">Premium</iv>
+        <% end %>
+        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <div class="card-body">
+          <h4 class="card-title"><%= offer.advertiser_name %></h4>
+          <p class="card-text"><%= offer.description %></p>
+        </div>
+        <div class="card-footer">
+          <a href="<%= offer.url %>" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

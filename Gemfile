@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.4'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Integrations Gems ############################################################
+gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
 gem 'rails_admin', '~> 1.2'
 gem 'rails_admin_rollincode', '~> 1.1'
@@ -23,6 +24,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Assets Gems ##################################################################
 gem 'coffee-rails', '~> 4.2'
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks', '~> 5'
